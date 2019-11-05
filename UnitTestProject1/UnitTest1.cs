@@ -91,10 +91,55 @@ namespace UnitTestProject1
             int string3 = "Alma";
 
             //act
-
+            list1.Add(string1);
+            list1.Add(string2);
+            list1.Add(string3);
+            actual = list1[2];
 
             //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        public void CustomList_Add_Adding5ValuesArrayCapacity()
+        {
+            //arrange
+            CustomList<int> list1 = new CustomList<int>();
+            int expected = 8;
+            int actual;
+            int number1 = 100;
+            int number2 = 200;
+            int number3 = 300;
+            int number4 = 400;
+            int number5 = 500;
+
+            //act
+            list1.Add(number1);
+            list1.Add(number2);
+            list1.Add(number3);
+            list1.Add(number4);
+            list1.Add(number5);
+            actual = 8;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
 
         }
+
+        public void CustomList_Add_AddValueToSomethingOtherThanIndex0()
+        {
+            //arrange
+            CustomList<string> ToDoList = new List<string>;
+            string expected = null;
+            string actual;
+
+            //act
+            ToDoList[4] = "walk dog";
+            actual = ToDoList[2];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
