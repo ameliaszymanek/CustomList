@@ -72,6 +72,25 @@ namespace CustomList
             count++;
         }
 
+        public void Remove(T item)
+        {
+            //find item of equal value (T)
+            //loop over all indexes to compare if = or !=
+            for (int i = 0; i < count; i++)
+            {
+                if (items[i].Equals(item))
+                {
+                    //shift items after to fill places
+                    i = (i + 1);
+                    foreach (T item in items)
+                    {
+                        //iterate over each remaining item in items and place it one space to the left
+                    }
+                }
+            }
+            count--;
+        }
+
 
 
         

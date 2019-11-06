@@ -259,12 +259,14 @@ namespace UnitTestProject1
             list1.Add(string2);
             list1.Add(string3);
             list1.Add(string4);
-            list1.Remove(list1[0]);
+            list1.Remove("Alto");
             //actual string at index 0 in list 1
             actual = list1[0];
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+
     }
 }
