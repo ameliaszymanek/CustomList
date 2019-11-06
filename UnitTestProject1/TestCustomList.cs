@@ -5,8 +5,9 @@ using CustomList;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class TestCustomList
     {
+        ///////////// ADD TEST METHODS //////////
         [TestMethod]
         public void CustomList_Add_AddOneValueToListCount()
         {
@@ -161,6 +162,109 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(expected, actual);
 
+        }
+
+        ///////// REMOVE TEST METHODS /////////
+        
+        [TestMethod]
+        public void CustomList_Remove_RemoveOneValueFromListCheckCount()
+        {
+            //arrange
+            CustomList<string> list1 = new CustomList<string>();
+            int expected = 3;
+            int actual;
+            string string1 = "Soprano";
+            string string2 = "Alto";
+            string string3 = "Tenor";
+            string string4 = "Baritone";
+
+            //act
+            list1.Add(string1);
+            list1.Add(string2);
+            list1.Add(string3);
+            list1.Add(string4);
+            list1.Remove(list1[3]);
+            actual = list1.Count;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CustomList_Remove_RemoveMultipleValuesFromListCheckCount()
+        {
+            //arrange
+            CustomList<string> list1 = new CustomList<string>();
+            int expected = 1;
+            int actual;
+            string string1 = "Soprano";
+            string string2 = "Alto";
+            string string3 = "Tenor";
+            string string4 = "Baritone";
+
+            //act
+            list1.Add(string1);
+            list1.Add(string2);
+            list1.Add(string3);
+            list1.Add(string4);
+            list1.Remove(list1[1]);
+            list1.Remove(list1[2]);
+            list1.Remove(list1[3]);
+            actual = list1.Count;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CustomList_Remove_RemoveOneValueCheckCapacity()
+        {
+            //arrange
+            CustomList<string> list1 = new CustomList<string>();
+            int expected = 4;
+            int actual;
+            string string1 = "Soprano";
+            string string2 = "Alto";
+            string string3 = "Tenor";
+            string string4 = "Baritone";
+            string string5 = "Bass";
+
+            //act
+            list1.Add(string1);
+            list1.Add(string2);
+            list1.Add(string3);
+            list1.Add(string4);
+            list1.Add(string5);
+            list1.Remove(list1[4]);
+            actual = list1.Capacity;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CustomList_Remove_RemoveValueAtZeroIndexItemsShiftCheckNewStringAtZeroIndex()
+        {
+            //arrange
+            CustomList<string> list1 = new CustomList<string>();
+            string expected = "Alto";
+            string actual;
+            string string1 = "Soprano";
+            string string2 = "Alto";
+            string string3 = "Tenor";
+            string string4 = "Baritone";
+
+            //act
+            list1.Add(string1);
+            list1.Add(string2);
+            list1.Add(string3);
+            list1.Add(string4);
+            list1.Remove(list1[0]);
+            //actual string at index 0 in list 1
+            actual = list1[0];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
