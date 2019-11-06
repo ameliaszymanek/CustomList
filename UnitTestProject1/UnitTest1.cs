@@ -7,39 +7,39 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
-        //[TestMethod]
-        //public void CustomList_Add_AddOneValueToListCount()
-        //{
-        //    //arrange
-        //    CustomList<int> list1 = new CustomList<int>();
-        //    int expected = 1;
-        //    int actual;
-        //    int number1 = 3;
+        [TestMethod]
+        public void CustomList_Add_AddOneValueToListCount()
+        {
+            //arrange
+            CustomList<int> list1 = new CustomList<int>();
+            int expected = 1;
+            int actual;
+            int number1 = 3;
 
-        //    //act
-        //    list1.Add(number1);
-        //    actual = list1.Count;
+            //act
+            list1.Add(number1);
+            actual = list1.Count;
 
-        //    //Assert
-        //    Assert.AreEqual(expected, actual);
+            //Assert
+            Assert.AreEqual(expected, actual);
 
-        //}
+        }
+        [TestMethod]
+        public void CustomList_Count_CountIs0WithNoValuesInList()
+        {
+            //arrange
+            CustomList<int> list1 = new CustomList<int>();
+            int expected = 0;
+            int actual;
 
-        //public void CustomList_Count_CountIs0WithNoValuesInList()
-        //{
-        //    //arrange
-        //    CustomList<int> list1 = new CustomList<int>();
-        //    int expected = 0;
-        //    int actual;
+            //act
+            actual = list1.Count;
 
-        //    //act
-        //    actual = list1.Count;
+            //Assert
+            Assert.AreEqual(expected, actual);
 
-        //    //Assert
-        //    Assert.AreEqual(expected, actual);
-
-        //}
-
+        }
+        [TestMethod]
         public void CustomList_Add_AddingValuesThatResizeArray()
         {
             //arrange
@@ -63,7 +63,7 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(expected, actual);
         }
-
+        //[TestMethod]
         //public void CustomList_Add_AddingStringValuesToListCount()
         //{
         //    //arrange
@@ -100,6 +100,7 @@ namespace UnitTestProject1
         //    Assert.AreEqual(expected, actual);
         //}
 
+        //[TestMethod]
         //public void CustomList_Add_Adding5ValuesArrayCapacity()
         //{
         //    //arrange
@@ -124,9 +125,5 @@ namespace UnitTestProject1
         //    Assert.AreEqual(expected, actual);
 
         //}
-
-
-
-
     }
 }

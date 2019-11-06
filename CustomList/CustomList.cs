@@ -56,10 +56,13 @@ namespace CustomList
                 //for loop to copy each index over to new array, loop to length of array (count)
                 for (int i = 0; i < count; i++)
                 {
-                    tempArray = new T[capacity];
+                    //temp array with copied indices is new array
+                    tempArray[i] = items[i];
                 }
+                items = tempArray;
             }
-
+            //new correct sized array;
+            
             items[count] = item;
             count++;
         }
