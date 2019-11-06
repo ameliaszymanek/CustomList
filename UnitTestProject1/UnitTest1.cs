@@ -7,50 +7,80 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
+        //[TestMethod]
+        //public void CustomList_Add_AddOneValueToListCount()
+        //{
+        //    //arrange
+        //    CustomList<int> list1 = new CustomList<int>();
+        //    int expected = 1;
+        //    int actual;
+        //    int number1 = 3;
+
+        //    //act
+        //    list1.Add(number1);
+        //    actual = list1.Count;
+
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+
+        //}
+        //[TestMethod]
+        //public void CustomList_Count_CountIs0WithNoValuesInList()
+        //{
+        //    //arrange
+        //    CustomList<int> list1 = new CustomList<int>();
+        //    int expected = 0;
+        //    int actual;
+
+        //    //act
+        //    actual = list1.Count;
+
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+
+        //}
+        //[TestMethod]
+        //public void CustomList_Add_AddingValuesThatResizeArray()
+        //{
+        //    //arrange
+        //    CustomList<int> list1 = new CustomList<int>();
+        //    int expected = 5;
+        //    int actual;
+        //    int number1 = 1;
+        //    int number2 = 2;
+        //    int number3 = 3;
+        //    int number4 = 4;
+        //    int number5 = 5;
+
+        //    //act
+        //    list1.Add(number1);
+        //    list1.Add(number2);
+        //    list1.Add(number3);
+        //    list1.Add(number4);
+        //    list1.Add(number5);
+        //    actual = list1.Count;
+
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+        //}
+
         [TestMethod]
-        public void CustomList_Add_AddOneValueToListCount()
+        public void CustomList_Add_AddingValuesThatResizeArray2()
         {
             //arrange
             CustomList<int> list1 = new CustomList<int>();
-            int expected = 1;
-            int actual;
-            int number1 = 3;
-
-            //act
-            list1.Add(number1);
-            actual = list1.Count;
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-
-        }
-        [TestMethod]
-        public void CustomList_Count_CountIs0WithNoValuesInList()
-        {
-            //arrange
-            CustomList<int> list1 = new CustomList<int>();
-            int expected = 0;
-            int actual;
-
-            //act
-            actual = list1.Count;
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-
-        }
-        [TestMethod]
-        public void CustomList_Add_AddingValuesThatResizeArray()
-        {
-            //arrange
-            CustomList<int> list1 = new CustomList<int>();
-            int expected = 5;
+            int expected = 9;
             int actual;
             int number1 = 1;
             int number2 = 2;
             int number3 = 3;
             int number4 = 4;
             int number5 = 5;
+            int number6 = 6;
+            int number7 = 7;
+            int number8 = 8;
+            int number9 = 9;
+
 
             //act
             list1.Add(number1);
@@ -58,11 +88,17 @@ namespace UnitTestProject1
             list1.Add(number3);
             list1.Add(number4);
             list1.Add(number5);
+            list1.Add(number6);
+            list1.Add(number7);
+            list1.Add(number8);
+            list1.Add(number9);
+
             actual = list1.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
         //[TestMethod]
         //public void CustomList_Add_AddingStringValuesToListCount()
         //{
