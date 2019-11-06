@@ -35,6 +35,11 @@ namespace CustomList
             }
         }
 
+        public T this[int index]
+        {
+            get { return items[index]; }
+        }
+
 
         //constructor
         public CustomList()
