@@ -10,8 +10,8 @@ namespace CustomList
     {
         //member variables
         private T[] items;
-        public int count { get; }
-        public int capacity { get; set; }
+        public int count; //{ get; }
+        public int capacity; //{ get; set; }
 
         //below in constructor???
         public int Count
@@ -29,11 +29,9 @@ namespace CustomList
             }
             set
             {
-                //logic
+                capacity = value;
             }
         }
-
-
 
 
         //constructor
