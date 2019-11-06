@@ -10,8 +10,8 @@ namespace CustomList
     {
         //member variables
         private T[] items;
-        public int count; //{ get; }
-        public int capacity; //{ get; set; }
+        private int count; //{ get; }
+        private int capacity; //{ get; set; }
 
         //below in constructor???
         public int Count
@@ -45,8 +45,8 @@ namespace CustomList
         //member methods
         public void Add(T item)
         {
-
-
+            items[0] = item;
+            count++;
         }
 
         
