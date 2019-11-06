@@ -82,7 +82,7 @@ namespace CustomList
                 {
                     //shift items after to fill places
                     i = (i + 1);
-                    foreach (T item in items)
+                    foreach (T item in items[i])
                     {
                         //iterate over each remaining item in items and place it one space to the left
                     }
