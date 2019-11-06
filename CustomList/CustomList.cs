@@ -25,6 +25,8 @@ namespace CustomList
         {
             get
             {
+                
+                
                 return capacity;
             }
             set
@@ -45,9 +47,24 @@ namespace CustomList
         //member methods
         public void Add(T item)
         {
-            items[0] = item;
+            if (count == capacity)
+            {
+                capacity *= 2;
+                //create new array
+                T[] tempArray = new T[capacity];
+                //copy values
+                //for loop to copy each index over to new array, loop to length of array (count)
+                for (int i = 0; i < count; i++)
+                {
+                    tempArray = new T[capacity];
+                }
+            }
+
+            items[count] = item;
             count++;
         }
+
+        
 
         
 
