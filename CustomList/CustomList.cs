@@ -99,7 +99,24 @@ namespace CustomList
                     } 
                 }   
             }
-        }
+
+
+            public override string ToString()
+            {
+                //return the list object as a string
+                for (int i = 0; i < length; i++)
+                {
+
+                }
+
+            }
+
+
+            public  CustomList operator - (parameters)
+            {
+                //Logic
+            }
+    }
 
 
 

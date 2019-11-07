@@ -268,6 +268,32 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void CustomList_Remove_RemoveValueCheckNewStringAtIndex2()
+        {
+            //arrange
+            CustomList<string> list1 = new CustomList<string>();
+            string expected = "Baritone";
+            string actual;
+            string string1 = "Soprano";
+            string string2 = "Alto";
+            string string3 = "Tenor";
+            string string4 = "Baritone";
+
+            //act
+            list1.Add(string1);
+            list1.Add(string2);
+            list1.Add(string3);
+            list1.Add(string4);
+            list1.Remove("Tenor");
+            actual = list1[2];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        
+
 
     }
 }
