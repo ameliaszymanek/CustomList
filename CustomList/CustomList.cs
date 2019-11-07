@@ -12,6 +12,8 @@ namespace CustomList
         private T[] items;
         private int count; //{ get; }
         private int capacity; //{ get; set; }
+        private int j;
+        private int k;
 
         //below in constructor???
         public int Count
@@ -80,11 +82,19 @@ namespace CustomList
             {
                 if (items[i].Equals(item))
                 {
-                    //shift items after to fill places
-                    i = (i + 1);
-                    foreach (T item in items[i])
+                    //declare new index
+                    //new index reference is the space + 1 of value being removed
+                   
+                    for (int j = i + 1; j <= count; j ++)
                     {
-                        //iterate over each remaining item in items and place it one space to the left
+                        //starting at j move item one spot to the left
+                        //do for the full length of array that starts at j
+                        //take the value at j and make it new value one space to the left (j -1)
+          
+                        for (int k = j - 1; k < count; k ++)
+                        {
+                            
+                        }
                     }
                 }
             }

@@ -216,31 +216,32 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void CustomList_Remove_RemoveOneValueCheckCapacity()
-        {
-            //arrange
-            CustomList<string> list1 = new CustomList<string>();
-            int expected = 4;
-            int actual;
-            string string1 = "Soprano";
-            string string2 = "Alto";
-            string string3 = "Tenor";
-            string string4 = "Baritone";
-            string string5 = "Bass";
+        /////// NO NEED TO CHANGE CAPACITY ////////
+        //[TestMethod]
+        //public void CustomList_Remove_RemoveOneValueCheckCapacity()
+        //{
+        //    //arrange
+        //    CustomList<string> list1 = new CustomList<string>();
+        //    int expected = 4;
+        //    int actual;
+        //    string string1 = "Soprano";
+        //    string string2 = "Alto";
+        //    string string3 = "Tenor";
+        //    string string4 = "Baritone";
+        //    string string5 = "Bass";
 
-            //act
-            list1.Add(string1);
-            list1.Add(string2);
-            list1.Add(string3);
-            list1.Add(string4);
-            list1.Add(string5);
-            list1.Remove(list1[4]);
-            actual = list1.Capacity;
+        //    //act
+        //    list1.Add(string1);
+        //    list1.Add(string2);
+        //    list1.Add(string3);
+        //    list1.Add(string4);
+        //    list1.Add(string5);
+        //    list1.Remove(list1[4]);
+        //    actual = list1.Capacity;
 
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+        //}
 
         [TestMethod]
         public void CustomList_Remove_RemoveValueAtZeroIndexItemsShiftCheckNewStringAtZeroIndex()
