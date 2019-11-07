@@ -207,9 +207,9 @@ namespace UnitTestProject1
             list1.Add(string2);
             list1.Add(string3);
             list1.Add(string4);
-            list1.Remove(list1[1]);
-            list1.Remove(list1[2]);
-            list1.Remove(list1[3]);
+            list1.Remove("Soprano");
+            list1.Remove("Alto");
+            list1.Remove("Tenor");
             actual = list1.Count;
 
             //Assert
@@ -244,7 +244,7 @@ namespace UnitTestProject1
         //}
 
         [TestMethod]
-        public void CustomList_Remove_RemoveValueAtZeroIndexItemsShiftCheckNewStringAtZeroIndex()
+        public void CustomList_Remove_RemoveValueShiftCheckNewStringAtZeroIndex()
         {
             //arrange
             CustomList<string> list1 = new CustomList<string>();
@@ -260,7 +260,7 @@ namespace UnitTestProject1
             list1.Add(string2);
             list1.Add(string3);
             list1.Add(string4);
-            list1.Remove("Alto");
+            list1.Remove("Soprano");
             //actual string at index 0 in list 1
             actual = list1[0];
 

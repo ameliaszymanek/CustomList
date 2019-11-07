@@ -82,23 +82,23 @@ namespace CustomList
             {
                 if (items[i].Equals(item))
                 {
-                    //declare new index
-                    //new index reference is the space + 1 of value being removed
-                   
-                    for (int j = i + 1; j <= count; j ++)
+                    count--;
+                    if (count == 0)
                     {
-                        //starting at j move item one spot to the left
-                        //do for the full length of array that starts at j
-                        //take the value at j and make it new value one space to the left (j -1)
-          
-                        for (int k = j - 1; k < count; k ++)
-                        {
-                            
-                        }
+                        items = new T[capacity];
                     }
-                }
+                    else 
+                    {
+                        for (int j = i + 1; j <= count; j++)
+                        {
+                            //starting at j move item one spot to the left
+                            //do for the full length of array that starts at j
+                            //take the value at j and make it new value one space to the left (j -1)
+                            items[j - 1] = items[j];
+                        }
+                    } 
+                }   
             }
-            count--;
         }
 
 
