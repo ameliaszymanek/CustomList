@@ -12,8 +12,7 @@ namespace CustomList
         private T[] items;
         private int count; //{ get; }
         private int capacity; //{ get; set; }
-        private int j;
-        private int k;
+        
 
         //below in constructor???
         public int Count
@@ -87,7 +86,7 @@ namespace CustomList
                     {
                         items = new T[capacity];
                     }
-                    else 
+                    else
                     {
                         for (int j = i + 1; j <= count; j++)
                         {
@@ -96,26 +95,34 @@ namespace CustomList
                             //take the value at j and make it new value one space to the left (j -1)
                             items[j - 1] = items[j];
                         }
-                    } 
-                }   
-            }
-
-
-            public override string ToString()
-            {
-                //return the list object as a string
-                for (int i = 0; i < length; i++)
-                {
-
+                    }
                 }
-
             }
+        }
 
 
-            public  CustomList operator - (parameters)
+        public override string ToString()
+        {
+            string finalString = "";
+            for (int i = 0; i < count; i++)
             {
-                //Logic
+            //loop over the entire list
+            //at each index, take item and move it to a new index...
+            //every item will then be added to that same index (a running list of things in one line)
+            //the new index is a list of all of the items in the list
+            //return all items in list as a string
+
+                finalString +=items[0].ToString();    
             }
+            return finalString;
+
+        }
+
+
+            //public  CustomList<T> operator - (T item)
+            //{
+            //    //2 loops to add stuff from first list then second
+            //}
     }
 
 
@@ -124,5 +131,5 @@ namespace CustomList
 
         
 
-    }
 }
+
