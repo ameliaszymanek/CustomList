@@ -216,32 +216,6 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
-        /////// NO NEED TO CHANGE CAPACITY ////////
-        //[TestMethod]
-        //public void CustomList_Remove_RemoveOneValueCheckCapacity()
-        //{
-        //    //arrange
-        //    CustomList<string> list1 = new CustomList<string>();
-        //    int expected = 4;
-        //    int actual;
-        //    string string1 = "Soprano";
-        //    string string2 = "Alto";
-        //    string string3 = "Tenor";
-        //    string string4 = "Baritone";
-        //    string string5 = "Bass";
-
-        //    //act
-        //    list1.Add(string1);
-        //    list1.Add(string2);
-        //    list1.Add(string3);
-        //    list1.Add(string4);
-        //    list1.Add(string5);
-        //    list1.Remove(list1[4]);
-        //    actual = list1.Capacity;
-
-        //    //Assert
-        //    Assert.AreEqual(expected, actual);
-        //}
 
         [TestMethod]
         public void CustomList_Remove_RemoveValueShiftCheckNewStringAtZeroIndex()
@@ -292,7 +266,90 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
-        
+        /////// TO STRING ///////
+        [TestMethod]
+        //bool
+        //char 
+        public void CustomList_ToString_IntToString()
+        {
+            //arrange
+            CustomList<int> list1 = new CustomList<int>();
+            string expected = "1234";
+            string actual;
+            int int1 = 1;
+            int int2 = 2;
+            int int3 = 3;
+            int int4 = 4;
+
+            //act
+            list1.Add(int1);
+            list1.Add(int2);
+            list1.Add(int3);
+            list1.Add(int4);
+            actual = list1.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CustomList_ToString_DoubToString()
+        {
+            //arrange
+            CustomList<double> list1 = new CustomList<double>();
+            string expected = "88.9";
+            string actual;
+            double dbl1 = 88.9;
+
+            //act
+            list1.Add(dbl1);
+            actual = list1.ToString();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CustomList_ToString_CharToString()
+        {
+            //arrange
+            CustomList<char> list1 = new CustomList<char>();
+            string expected = "abc";
+            string actual;
+            char char1 = 'a';
+            char char2 = 'b';
+            char char3 = 'c';
+
+            //act
+
+
+            //Assert
+
+        }
+
+
+
+
+        //[TestMethod]
+        //public void CustomList_ToString_AddTwoListsToString()
+        //{
+        //    //arrange
+        //    CustomList<string> list1 = new CustomList<string>();
+        //    CustomList<string> list2 = new CustomList<string>();
+        //    string expected = "banana";
+        //    string actual;
+        //    string list1.string1 = "b";
+        //    string list1.string2 = "a";
+        //    string list1.string3 = "n";
+        //    string list2.string1 = "a";
+        //    string list2.string2 = "n";
+        //    string list2.string3 = "a";
+
+        //    //act
+
+        //    //Assert
+        //    Assert.AreEqual(expected, actual);
+        //}
 
 
     }

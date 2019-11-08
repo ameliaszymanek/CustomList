@@ -112,7 +112,7 @@ namespace CustomList
             //the new index is a list of all of the items in the list
             //return all items in list as a string
 
-                finalString +=items[0].ToString();    
+                finalString += items[i].ToString();    
             }
             return finalString;
 
