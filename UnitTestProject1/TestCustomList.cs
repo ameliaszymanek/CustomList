@@ -489,7 +489,32 @@ namespace UnitTestProject1
 
             //Assert
             Assert.AreEqual(expected.ToString(), actual.ToString());
+        }
 
+        [TestMethod]
+        public void CustomList_Zip_ZipTwoIntListsOfDifferentSizeTogether()
+        {
+            //arrange
+            CustomList<int> oddList = new CustomList<int>();
+            CustomList<int> evenList = new CustomList<int>();
+            CustomList<int> expected = new CustomList<int>() { 1, 3, 5, 2, 1};
+            int int1 = 1;
+            int int2 = 3;
+            int int3 = 5;
+            int int4 = 2;
+            int int5 = 1;
+
+            //act
+            oddList.Add(int1);
+            oddList.Add(int3);
+            oddList.Add(int5);
+            evenList.Add(int2);
+            evenList.Add(int4);
+            CustomList<int> actual = oddList.Zip(evenList);
+
+
+            //Assert
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
     }
 }
