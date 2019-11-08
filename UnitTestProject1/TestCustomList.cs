@@ -268,8 +268,6 @@ namespace UnitTestProject1
 
         /////// TO STRING ///////
         [TestMethod]
-        //bool
-        //char 
         public void CustomList_ToString_IntToString()
         {
             //arrange
@@ -321,15 +319,17 @@ namespace UnitTestProject1
             char char3 = 'c';
 
             //act
-
+            list1.Add(char1);
+            list1.Add(char2);
+            list1.Add(char3);
+            actual = list1.ToString();
 
             //Assert
-
+            Assert.AreEqual(expected, actual);
         }
 
-
-
-
+       
+        
         //[TestMethod]
         //public void CustomList_ToString_AddTwoListsToString()
         //{
