@@ -419,7 +419,7 @@ namespace UnitTestProject1
             //arrange
             CustomList<int> oddList = new CustomList<int>();
             CustomList<int> evenList = new CustomList<int>();
-            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
+            CustomList<int> expected = new CustomList<int>() { 1, 3, 5, 2, 1, 6 };
             int int1 = 1;
             int int2 = 3;
             int int3 = 5;
@@ -438,7 +438,7 @@ namespace UnitTestProject1
 
 
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
 
         [TestMethod]
@@ -465,7 +465,31 @@ namespace UnitTestProject1
             CustomList<char> actual = someLetters.Zip(missingLetters);
 
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+        }
+
+        [TestMethod]
+        public void CustomList_Zip_ZipTwoDoubleListsTogether()
+        {
+            //arrange
+            CustomList<double> dubList1 = new CustomList<double>();
+            CustomList<double> dubList2 = new CustomList<double>();
+            CustomList<double> expected = new CustomList<double>() { 1.23, 2.34, 3.45, 4.56};
+            double dub1 = 1.23;
+            double dub2 = 3.45;
+            double dub3 = 2.34;
+            double dub4 = 4.56;
+
+            //act
+            dubList1.Add(dub1);
+            dubList1.Add(dub2);
+            dubList2.Add(dub3);
+            dubList2.Add(dub4);
+            CustomList<double> actual = dubList1.Zip(dubList2);
+
+            //Assert
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+
         }
     }
 }

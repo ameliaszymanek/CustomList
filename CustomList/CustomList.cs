@@ -170,6 +170,42 @@ namespace CustomList
             //newList = list1;
             return list1;
         }
+
+        public CustomList<T> Zip(CustomList<T> list2)
+        {
+            //create new list (which will be the 2 lists zipped together)
+            CustomList<T> newList = new CustomList<T>();
+            //new variable to determine longer list (countwise)
+            int biggerList;
+            //create statements to determine which one will be biggerList
+            if(Count >= list2.Count)
+            {
+                biggerList = Count;
+            }
+            else
+            {
+                biggerList = list2.Count;
+            }
+            //loop over each [i] in list 1
+            //loop over each [i] in list 2
+            for(int i = 0; i < biggerList; i++)
+            {
+                if (i < Count)
+                {
+                    newList.Add(items[i]);
+                }
+                if (i < list2.Count)
+                {
+                    newList.Add(list2[i]);
+                }
+            }
+            //add first [i] from list1 then first [i] from list 2
+            //keep going until end of list
+            //return the new list
+            return newList;
+        }
+
+
     }
 
 
