@@ -146,18 +146,14 @@ namespace CustomList
 
         public static CustomList<T> operator - (CustomList<T> list1, CustomList<T> list2)
         {
-            //create new list that will be returned
-            //CustomList<T> newList = new CustomList<T>();
-
             //compare items from list1 to list2
             //loop over every item
-            //if there is value in list2 that is equal to value in list1, **remove that value from list1
-            //i.e. list1[i] == list2[i]
             for (int i = 0; i < list1.Count; i++)
             {
                 for (int j = 0; j < list2.Count; j++)
                 {
-                    if(list1[i].Equals(list2[j]))
+                    //if there is value in list2 that is equal to value in list1, **remove that value from list1
+                    if (list1[i].Equals(list2[j]))
                     {
                         //remove the equal value from list1
                         list1.Remove(list1[i]);
@@ -166,8 +162,7 @@ namespace CustomList
                 }
             }
 
-            //return the new list
-            //newList = list1;
+            //return the modified list
             return list1;
         }
 
