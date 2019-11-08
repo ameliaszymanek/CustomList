@@ -328,10 +328,9 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
-
-
+        /////// OVERLOAD + OPERATOR ///////
         [TestMethod]
-        public void CustomList_ToString_AddTwoListsOfCharToString()
+        public void CustomList_PlusOperator_AddTwoListsOfCharToString()
         {
             //arrange
             CustomList<char> list1 = new CustomList<char>();
@@ -385,6 +384,20 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual.ToString());
         }
 
+        /////// OVERLOAD - OPERATOR ///////
+        [TestMethod]
+        public void CustomList_MinusOperator_SubtractOneListFromAnother()
+        {
+            //arrange
+            CustomList<int> list1 = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> list2 = new CustomList<int>() { 2, 1, 6 };
+            string expected = "3, 5";
 
+            //act
+            CustomList<int> actual = list1 - list2;
+
+            //Assert
+            Assert.AreEqual(expected, actual.ToString());
+        }
     }
 }
