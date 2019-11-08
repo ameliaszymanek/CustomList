@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomList
+namespace CustomList 
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable
     {
         //member variables
         private T[] items;
@@ -118,6 +119,13 @@ namespace CustomList
 
         }
 
+        public IEnumerator GetEnumerator()
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                yield return items[i];
+            }
+        }
 
         public static CustomList<T> operator + (CustomList<T> list1, CustomList<T> list2)
         {
