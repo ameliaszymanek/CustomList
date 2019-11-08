@@ -119,10 +119,22 @@ namespace CustomList
         }
 
 
-            //public  CustomList<T> operator - (T item)
-            //{
-            //    //2 loops to add stuff from first list then second
-            //}
+        public static CustomList<T> operator + (CustomList<T> list1, CustomList<T> list2)
+        {
+            //2 loops to add stuff from first list then second
+            CustomList<T> newList = new CustomList<T>();
+            for (int i = 0; i < list1.Count; i++)
+            {
+                //add items from list1 to new list
+                newList.Add(list1[i]);
+            }
+            for (int i = 0; i < list2.Count; i++)
+            {
+                //add items from list21 to new list
+                newList.Add(list2[i]);
+            }
+            return newList;
+        }
     }
 
 

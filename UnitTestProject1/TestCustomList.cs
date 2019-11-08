@@ -328,28 +328,62 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
 
-       
-        
-        //[TestMethod]
-        //public void CustomList_ToString_AddTwoListsToString()
-        //{
-        //    //arrange
-        //    CustomList<string> list1 = new CustomList<string>();
-        //    CustomList<string> list2 = new CustomList<string>();
-        //    string expected = "banana";
-        //    string actual;
-        //    string list1.string1 = "b";
-        //    string list1.string2 = "a";
-        //    string list1.string3 = "n";
-        //    string list2.string1 = "a";
-        //    string list2.string2 = "n";
-        //    string list2.string3 = "a";
 
-        //    //act
 
-        //    //Assert
-        //    Assert.AreEqual(expected, actual);
-        //}
+        [TestMethod]
+        public void CustomList_ToString_AddTwoListsOfCharToString()
+        {
+            //arrange
+            CustomList<char> list1 = new CustomList<char>();
+            CustomList<char> list2 = new CustomList<char>();
+            string expected = "banana";
+            char char1 = 'b';
+            char char2 = 'a';
+            char char3 = 'n';
+            char char4 = 'a';
+            char char5 = 'n';
+            char char6 = 'a';
+
+            //act
+            list1.Add(char1);
+            list1.Add(char2);
+            list1.Add(char3);
+            list2.Add(char4);
+            list2.Add(char5);
+            list2.Add(char6);
+            
+            CustomList<char> actual = list1 + list2;
+
+            //Assert
+            Assert.AreEqual(expected, actual.ToString());
+        }
+
+        [TestMethod]
+        public void CustomList_ToString_AddTwoListsOfIntToString()
+        {
+            //arrange
+            CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            string expected = "123456";
+            int int1 = 1;
+            int int2 = 2;
+            int int3 = 3;
+            int int4 = 4;
+            int int5 = 5;
+            int int6 = 6;
+
+            //act
+            list1.Add(int1);
+            list1.Add(int2);
+            list1.Add(int3);
+            list2.Add(int4);
+            list2.Add(int5);
+            list2.Add(int6);
+            CustomList<int> actual = list1 + list2;
+
+            //Assert
+            Assert.AreEqual(expected, actual.ToString());
+        }
 
 
     }
